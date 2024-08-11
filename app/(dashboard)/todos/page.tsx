@@ -1,12 +1,13 @@
 import db from '@/utils/db'
 import CreateTodo from './create-todo-form'
+import Todo from './Todo'
 
 const getTodos = async () => {
   await new Promise((resolve) => {
-    setTimeout(() => resolve(), 2000)
+    setTimeout(() => resolve(), 200)
   })
 
-  // throw new Error('LMAO YOU TWAT!!!')
+  // throw new TypeError('LMAO YOU TWAT!!!')
   return await db.todo.findMany()
 }
 
@@ -18,10 +19,7 @@ const TodosPage = async () => {
 
       <div>
         {todos.map((todo) => (
-          <div key={todo.id}>
-            <div>{new Date(todo.craetedAt).toLocaleDateString()}</div>
-            <div>{todo.content}</div>
-          </div>
+          <Todo todo={todo} key={todo.id} />
         ))}
       </div>
     </div>

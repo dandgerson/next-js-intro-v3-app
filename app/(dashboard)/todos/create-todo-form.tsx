@@ -20,17 +20,11 @@ const CreateTodo = () => {
     >
       <div>
         <label htmlFor="content">What to do?</label>
-        <input
-          className="text-black"
-          type="text"
-          id="content"
-          name="content"
-          defaultValue=""
-        />
+        <input className="text-black" type="text" id="content" name="content" />
       </div>
       <div>
         <label htmlFor="completed">Is todo completed?</label>
-        <input type="checkbox" id="completed" />
+        <input type="checkbox" id="completed" name="completed" />
       </div>
       <div>
         <button type="submit">Submit</button>
