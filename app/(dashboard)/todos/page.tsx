@@ -3,8 +3,8 @@ import CreateTodo from './create-todo-form'
 import Todo from './Todo'
 
 const getTodos = async () => {
-  await new Promise((resolve) => {
-    setTimeout(() => resolve(), 200)
+  await new Promise((resolve: (value: unknown) => void): void => {
+    setTimeout(() => resolve(undefined), 200)
   })
 
   // throw new TypeError('LMAO YOU TWAT!!!')
